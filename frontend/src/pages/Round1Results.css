@@ -1,0 +1,248 @@
+.r1r-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 1.5rem;
+  color: #2563eb;
+}
+
+.r1r-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.r1r-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.r1r-header h1 {
+  font-size: 2.5rem;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+}
+
+.r1r-subtitle {
+  color: #64748b;
+  font-size: 1.1rem;
+}
+
+/* Score Card */
+.r1r-scorecard {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  border-left: 6px solid #2563eb;
+}
+
+.r1r-scorecard.qualified {
+  border-left-color: #10b981;
+  background: linear-gradient(135deg, #f0fdf4, #ffffff);
+}
+
+.r1r-scorecard.not-qualified {
+  border-left-color: #ef4444;
+  background: linear-gradient(135deg, #fef2f2, #ffffff);
+}
+
+.r1r-score-main {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.r1r-score-value {
+  font-size: 4rem;
+  font-weight: 800;
+  color: #1e293b;
+  line-height: 1;
+}
+
+.r1r-score-label {
+  font-size: 1rem;
+  color: #64748b;
+  margin-top: 0.25rem;
+}
+
+.r1r-score-details {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.r1r-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.r1r-detail-label {
+  font-size: 0.85rem;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.r1r-detail-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.r1r-qualify-badge, .r1r-eliminated-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.r1r-qualify-badge {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.r1r-eliminated-badge {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.r1r-badge-icon {
+  font-size: 1.5rem;
+}
+
+/* Leaderboard */
+.r1r-leaderboard {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.r1r-leaderboard h2 {
+  font-size: 1.5rem;
+  color: #1e293b;
+  margin-bottom: 1.5rem;
+}
+
+.r1r-table-wrapper {
+  overflow-x: auto;
+}
+
+.r1r-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.r1r-table th {
+  background: #f1f5f9;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: #475569;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+}
+
+.r1r-table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #f1f5f9;
+  color: #1e293b;
+}
+
+.r1r-my-row td {
+  background: #eff6ff;
+  font-weight: 600;
+}
+
+.r1r-you {
+  color: #2563eb;
+  font-size: 0.85rem;
+  margin-left: 0.25rem;
+}
+
+.r1r-score-cell {
+  font-weight: 700;
+  color: #2563eb;
+  font-size: 1.1rem;
+}
+
+.r1r-tag {
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.r1r-tag.qualified {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.r1r-tag.eliminated {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+/* Actions */
+.r1r-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.r1r-btn-round2 {
+  padding: 1rem 2.5rem;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(37,99,235,0.3);
+}
+
+.r1r-btn-round2:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37,99,235,0.4);
+}
+
+.r1r-btn-finish {
+  padding: 1rem 2.5rem;
+  background: #64748b;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.r1r-btn-finish:hover {
+  background: #475569;
+}
+
+@media (max-width: 768px) {
+  .r1r-container { padding: 1rem; }
+  .r1r-header h1 { font-size: 1.8rem; }
+  .r1r-score-value { font-size: 3rem; }
+  .r1r-score-details { gap: 1.5rem; }
+}

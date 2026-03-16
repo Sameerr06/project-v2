@@ -1,0 +1,74 @@
+.heroSection {
+  border-radius: 1rem;
+  width: 100%;
+  height: 80vh;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 4rem;
+}
+
+.backgroundImage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.heroContent {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  color: #fff;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4));
+}
+
+.welcomeTitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.welcomeText {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  max-width: 800px;
+  text-align: center;
+  line-height: 1.6;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.startbutton {
+  background-color: #2563eb;
+  color: white;
+  padding: clamp(0.8rem, 2vw, 1rem) clamp(1.5rem, 3vw, 2rem);
+  border: none;
+  border-radius: 8px;
+  font-size: clamp(1.1rem, 1.5vw, 1.25rem);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.startbutton:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .heroSection {
+    height: 60vh;
+  }
+  
+  .heroContent {
+    padding: 1rem;
+  }
+}

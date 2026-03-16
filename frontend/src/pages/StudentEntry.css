@@ -1,0 +1,151 @@
+.student-entry-container {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #f8fafc;
+}
+
+.left-section {
+  flex: 1;
+  background: linear-gradient(135deg, #4a90e2, #67b26f);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem;
+}
+
+.right-section {
+  flex: 1;
+  background-color: #ffffff;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.left-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.illustration {
+  max-width: 80%;
+  height: auto;
+  border-radius: 10px;
+  
+}
+
+.right-section h2 {
+  color: #2c3e50;
+  margin-bottom: 2rem;
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  max-width: 450px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.form-container input,
+.form-container select {
+  padding: 1rem 1.2rem;
+  border: 1px solid #e1e8ed;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #2c3e50;
+  background-color: #f8f9fa;
+  transition: all 0.3s ease;
+}
+
+.form-container input:focus,
+.form-container select:focus {
+  outline: none;
+  border-color: #4a90e2;
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+  background-color: #ffffff;
+}
+
+.form-container input::placeholder {
+  color: #95a5a6;
+}
+
+.form-container select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%232c3e50' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 6h10l-5 5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  padding-right: 2.5rem;
+}
+
+.form-container button {
+  background: linear-gradient(135deg, #4a90e2, #67b26f);
+  color: #ffffff;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.form-container button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.0);
+}
+
+.form-container button:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 914px) {
+  .student-entry-container {
+    flex-direction: column;
+  }
+
+  .left-section,
+  .right-section {
+    padding: 2rem;
+  }
+
+  .left-section h1 {
+    font-size: 2rem;
+  }
+
+  .right-section h2 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .form-container {
+    max-width: 100%;
+  }
+
+  .form-container input,
+  .form-container select,
+  .form-container button {
+    font-size: 1rem;
+    padding: 0.8rem 1rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .student-entry-container {
+    flex-direction: column;
+  }
+
+  .left-section, .right-section {
+    padding: 2rem;
+  }
+}
