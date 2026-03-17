@@ -1,3 +1,4 @@
+import { getApiUrl } from '../services/api';
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./AdminQuestions.css";
@@ -40,7 +41,7 @@ function AdminQuestions() {
         filter === "all"
           ? "/api/admin/questions/"
           : `/api/admin/questions/?round=${filter}`;
-      const res = await fetch(url, {
+      const res = await fetch(getApiUrl(url), {
         headers: { Authorization: `Token ${localStorage.getItem("adminToken")}` },
       });
       const data = await res.json();
@@ -365,3 +366,4 @@ function AdminQuestions() {
 }
 
 export default AdminQuestions;
+
