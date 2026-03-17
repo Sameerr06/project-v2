@@ -14,6 +14,8 @@ def home(request):
 
 
 urlpatterns = [
+    path('', home, name='home'),
+    path('api/', home, name='api_home'),
     path('admin/', admin.site.urls),
 
     # Student
