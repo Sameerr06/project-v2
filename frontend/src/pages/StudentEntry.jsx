@@ -26,7 +26,7 @@ export default function StudentEntry() {
     setError('')
 
     try {
-      const response = await fetch(getApiUrl('/api/student/', {
+      const response = await fetch(getApiUrl('/api/student/'), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

@@ -165,7 +165,7 @@ function Quiz() {
       return;
     }
 
-    fetch(`/api/questions/?round=1`)
+    fetch(getApiUrl(`/api/questions/?round=1`))
       .then((res) => {
         if (!res.ok) throw new Error('Failed to fetch questions');
         return res.json();
@@ -191,7 +191,7 @@ function Quiz() {
     // Submit current answer to backend (Round 1)
     if (answer) {
       try {
-        await fetch(getApiUrl('/api/submit-answer/', {
+        await fetch(getApiUrl('/api/submit-answer/'), {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
@@ -209,7 +209,7 @@ function Quiz() {
     if (currentIndex + 1 >= questions.length) {
       // Round 1 complete — call backend to get qualification result
       try {
-        const res = await fetch(getApiUrl('/api/complete-round1/', {
+        const res = await fetch(getApiUrl('/api/complete-round1/'), {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ student_id: studentId }),
@@ -259,7 +259,7 @@ function Quiz() {
     setIsCompiling(true);
     setOutput('Compiling and running...');
     try {
-      const response = await fetch(`/api/compile/`, {
+      const response = await fetch(getApiUrl('/api/compile/'), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ code, language }),

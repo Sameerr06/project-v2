@@ -83,7 +83,7 @@ function AdminQuestions() {
       }
     }
     try {
-      const res = await fetch("/api/admin/questions/create/", {
+      const res = await fetch(getApiUrl("/api/admin/questions/create/"), {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -109,7 +109,7 @@ function AdminQuestions() {
   const confirmDelete = async () => {
     if (!deleteConfirm) return;
     try {
-      const res = await fetch(`/api/admin/questions/delete/${deleteConfirm}/`, {
+      const res = await fetch(getApiUrl(`/api/admin/questions/delete/${deleteConfirm}/`), {
         method: "DELETE",
         headers: { Authorization: `Token ${localStorage.getItem("adminToken")}` },
       });

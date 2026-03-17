@@ -20,7 +20,7 @@ export default function Round1Results() {
     }
 
     // Fetch leaderboard for round 1
-    fetch(getApiUrl('/api/leaderboard/?round=1')
+    fetch(getApiUrl('/api/leaderboard/?round=1'))
       .then(r => r.json())
       .then(data => {
         setLeaderboard(data.slice(0, 10)); // top 10
@@ -32,7 +32,7 @@ export default function Round1Results() {
   const handleContinueRound2 = async () => {
     const studentId = localStorage.getItem('studentId');
     try {
-      await fetch(getApiUrl('/api/start-round2/', {
+      await fetch(getApiUrl('/api/start-round2/'), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ student_id: studentId }),
