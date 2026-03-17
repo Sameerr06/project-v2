@@ -1,3 +1,4 @@
+import { getApiUrl } from '../services/api';
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import './StudentEntry.css'
@@ -25,7 +26,7 @@ export default function StudentEntry() {
     setError('')
 
     try {
-      const response = await fetch('/api/student/', {
+      const response = await fetch(getApiUrl('/api/student/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -131,3 +132,4 @@ export default function StudentEntry() {
     </div>
   )
 }
+

@@ -1,3 +1,4 @@
+import { getApiUrl } from '../services/api';
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./ThankYou.css";
@@ -35,7 +36,7 @@ export default function ThankYou() {
     localStorage.removeItem('currentRound');
 
     // Fetch overall leaderboard
-    fetch('/api/leaderboard/')
+    fetch(getApiUrl('/api/leaderboard/')
       .then(r => r.json())
       .then(data => setLeaderboard(data.slice(0, 5)))
       .catch(() => {});
@@ -138,3 +139,4 @@ export default function ThankYou() {
     </div>
   );
 }
+
