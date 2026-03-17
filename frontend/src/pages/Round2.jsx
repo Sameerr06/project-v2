@@ -113,7 +113,7 @@ function Round2() {
     const studentId = localStorage.getItem('studentId');
     if (!studentId) { navigate('/'); return; }
 
-    fetch(getApiUrl('/api/questions/?round=2')
+    fetch(getApiUrl('/api/questions/?round=2'))
       .then(r => { if (!r.ok) throw new Error('Failed'); return r.json(); })
       .then(data => {
         if (Array.isArray(data) && data.length > 0) {
@@ -128,7 +128,7 @@ function Round2() {
   const finishRound2 = useCallback(async (forced = false) => {
     const studentId = localStorage.getItem('studentId');
     try {
-      const res = await fetch(getApiUrl('/api/complete-round2/', {
+      const res = await fetch(getApiUrl('/api/complete-round2/'), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ student_id: studentId }),
@@ -171,7 +171,7 @@ function Round2() {
     const question = questions[currentIndex];
 
     try {
-      const res = await fetch(getApiUrl('/api/submit-answer/', {
+      const res = await fetch(getApiUrl('/api/submit-answer/'), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -223,7 +223,7 @@ function Round2() {
     setIsCompiling(true);
     setOutput('Compiling and running...');
     try {
-      const res = await fetch(getApiUrl('/api/compile/', {
+      const res = await fetch(getApiUrl('/api/compile/'), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ code, language }),
